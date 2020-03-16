@@ -1,0 +1,47 @@
+{
+  "title": "Getting Started with Pachyderm",
+  "description": "Want to learn how to do reproducible data science at scale? Learn the basics of Pachyderm, install in seconds, and try out a few basics steps.",
+  "difficulty": "beginner",
+  "time": "10 minutes",
+  "details": {
+    "steps": [
+        {
+            "title": "What is Pachyderm?",
+            "text": "step1.md"
+        },
+        {
+            "title": "What is Pachyderm?",
+            "text": "step2.md"
+        },
+        {
+            "title": "What is Pachyderm?",
+            "text": "step3.md"
+        },
+        {
+            "title": "What is Pachyderm?",
+            "text": "step4.md"
+        },
+        {
+            "title": "What is Pachyderm?",
+            "text": "step5.md"
+        }
+
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "dashboard": "Dashboard",
+    "uilayout": "terminal-iframe",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+  },
+  "backend": {
+    "imageid": "minikube"
+  }
+}

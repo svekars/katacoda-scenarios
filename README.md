@@ -1,10 +1,4 @@
-# Interactive Katacoda Scenarios
+# Pachyderm Interactive Courses
 
-[![](http://shields.katacoda.com/katacoda/svekars/count.svg)](https://www.katacoda.com/svekars "Get your profile on Katacoda.com")
+You can find official Pachyderm interactive courses in this repository.
 
-Visit https://www.katacoda.com/svekars to view the profile and interactive scenarios
-
-### Writing Scenarios
-Visit https://www.katacoda.com/docs to learn more about creating Katacoda scenarios
-
-For examples, visit https://github.com/katacoda/scenario-example
