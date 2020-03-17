@@ -10,11 +10,11 @@
             "text": "step1.md"
         },
         {
-            "title": "What is Pachyderm?",
+            "title": "",
             "text": "step2.md"
         },
         {
-            "title": "What is Pachyderm?",
+            "title": "Getting Started with Pachyderm",
             "text": "step3.md"
         },
         {
@@ -24,8 +24,11 @@
         {
             "title": "What is Pachyderm?",
             "text": "step5.md"
-        }
-
+        },
+        {   "title": "Access the Dashboard",
+            "text": "step6.md",
+            "code": "step6.sh"
+      }
     ],
     "intro": {
       "text": "intro.md",
@@ -44,7 +47,7 @@
     "showdashboard": true,
     "uilayout": "terminal-iframe",
     "dashboard": [
-      {"name": "PachDash", "port": 30080}
+      {"name": "PachDash", "port": 80}
     ]
   },
   "backend": {
