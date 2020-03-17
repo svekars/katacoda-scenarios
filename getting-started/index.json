@@ -42,8 +42,9 @@
   },
   "environment": {
     "showdashboard": true,
-    "dashboard": "Dashboard",
-    "uilayout": "terminal"
+    "dashboard": [
+      {"PachDash", "port":30650},
+    "uilayout": "terminal-iframe"
   },
   "backend": {
           "port": 30000,
