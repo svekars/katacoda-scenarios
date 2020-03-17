@@ -26,9 +26,8 @@
             "text": "step5.md"
         },
         {   "title": "Access the Dashboard",
-            "text": "step6.md",
-            "code": "step6.sh"
-      }
+            "text": "step6.md"
+        }
     ],
     "intro": {
       "text": "intro.md",
@@ -46,9 +45,7 @@
   "environment": {
     "showdashboard": true,
     "uilayout": "terminal-iframe",
-    "dashboard": [
-      {"name": "PachDash", "port": 80}
-    ]
+    "dashboard": [{"name": "PachDash", "port": 30080, "host": "host02"}]
   },
   "backend": {
           "port": 30000,
