@@ -9,7 +9,7 @@ In this tutorial, we will deploy Pachyderm on a `minikube` cluster.
 You can check that `minikube` is running by executing the following
 command:
 
-`minikube version`{{execute}}
+`minikube version && minikube status`{{execute}}
 
 Before you can deploy Pachyderm, you need to install the Pachyderm
 client which you will later use to deploy Pachyderm.
@@ -25,6 +25,12 @@ Verify that `pachctl` has been installed by running the following command:
 After `pachctl` is installed, deploy Pachyderm by running:
 
 `pachctl deploy local`{{execute}}
+
+Monitor container creation by running the following `watch` script:
+
+`watch -n 5 kubectl get pods`
+
+When all pods are running, press **CTL+C**.
 
 Now, run `pachctl version` again to verify that both `pachctl`
 and `pachd` are installed.
