@@ -1,1 +1,1 @@
-launch
+minikube start
