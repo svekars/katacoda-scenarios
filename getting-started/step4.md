@@ -2,8 +2,9 @@
 
 The following diagram describes high-level Pachyderm architecture.
 
-![Architecture Overview](../assets/steps-Pachyderm-stack-diagram_latest.png)
-
+<pre>
+![Architecture Overview](/assets/steps-Pachyderm-stack-diagram_latest.png)
+</pre>
 Here are the steps of a typical Pachyderm workflow:
 
 1. Data scientists leverage their preferred tools, programming languages,
