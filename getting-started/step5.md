@@ -28,7 +28,7 @@ After `pachctl` is installed, deploy Pachyderm by running:
 
 Monitor container creation by running the following `watch` script:
 
-`watch -n 5 kubectl get pods`
+`watch -n 5 kubectl get pods`{{execute}}
 
 When all pods are running, press **CTL+C**.
 
