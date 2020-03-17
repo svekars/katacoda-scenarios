@@ -38,6 +38,7 @@
     },
     "assets": {
       "host01": [{"file": "launch.sh", "target": "/usr/bin/", "chmod": "+x"}]
+    }
   },
   "environment": {
     "showdashboard": true,
