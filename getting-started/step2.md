@@ -1,4 +1,3 @@
-## What is versioned control for data and why do I need it?
 
 Moreover, data scientists should be able to trace back their results.
 If you deploy a multi-stage data science pipeline that collects the
