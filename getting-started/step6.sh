@@ -1,2 +1,2 @@
-docker run -p 80:80 -d pachyderm/dash
+docker run -p 30080:30080 -d pachyderm/dash
 
