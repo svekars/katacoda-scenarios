@@ -45,7 +45,7 @@
   "environment": {
     "showdashboard": true,
     "uilayout": "terminal-iframe",
-    "dashboard": [{"name": "PachDash", "port": 30080, "host": "host02"}]
+    "dashboard": [{"name": "PachDash", "port": 30080, "url": "https://[[HOST_SUBDOMAIN]]-30080-[[KATACODA_HOST]].environments.katacoda.com"}]
   },
   "backend": {
           "port": 30000,
