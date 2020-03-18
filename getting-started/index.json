@@ -45,7 +45,10 @@
   "environment": {
     "showdashboard": true,
     "uilayout": "terminal-iframe",
-    "dashboard": [{"name": "PachDash", "port": 5542, "url": "https://[[HOST_SUBDOMAIN]]-5542-[[KATACODA_HOST]].environments.katacoda.com"}]
+    "dashboard": [
+       {"name": "Kubernetes UI", "port": 80},
+       {"name": "PachDash", "port": 30080}
+    ]
   },
   "backend": {
           "port": 30000,
