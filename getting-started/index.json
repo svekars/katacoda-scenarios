@@ -52,6 +52,6 @@
   },
   "backend": {
           "port": 30000,
-          "imageid": "kubernetes"
+          "imageid": "minikube-running"
   }
 }
