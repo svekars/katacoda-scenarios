@@ -31,7 +31,6 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "set-env.sh",
       "courseData": "course.sh",
       "credits": ""
     },
