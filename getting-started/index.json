@@ -39,7 +39,7 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [{"file": "set-env.sh", "target": "/usr/bin/", "chmod": "+x"}]
+      "host01": [{"file": "launch.sh", "target": "/usr/bin/", "chmod": "+x"}]
     }
   },
   "environment": {
