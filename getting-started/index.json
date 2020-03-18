@@ -45,7 +45,7 @@
   "environment": {
     "showdashboard": true,
     "uilayout": "terminal-iframe",
-    "dashboard": [
+    "dashboards": [
        {"name": "Kubernetes UI", "port": 80},
        {"name": "PachDash", "port": 30080}
     ]
