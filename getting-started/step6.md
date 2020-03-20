@@ -35,8 +35,7 @@ Open an `edges.py` file for editing:
 
 Add the following Python code:
 
-`# edges.py
-import cv2
+`import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 import os
