@@ -1,5 +1,3 @@
-## Pachyderm Overview
-
 Pachyderm adheres to the best principles of modern infrastructure
 which include the following:
 

@@ -1,5 +1,3 @@
-## What is versioned control for data and why do I need it?
-
 Imagine a machine learning model workflow in which you have
 training data that is being constantly updated. The data is
 collected from some sort of source, such as a database, a file,

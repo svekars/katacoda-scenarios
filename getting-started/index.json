@@ -6,7 +6,7 @@
   "details": {
     "steps": [
         {
-            "title": "What is Pachyderm?",
+            "title": "What is versioned control for data and why do I need it?",
             "text": "step1.md"
         },
         {
@@ -14,19 +14,22 @@
             "text": "step2.md"
         },
         {
-            "title": "Getting Started with Pachyderm",
+            "title": "Pachyderm Overview",
             "text": "step3.md"
         },
         {
-            "title": "What is Pachyderm?",
+            "title": "Pachyderm Architecture",
             "text": "step4.md"
         },
         {
-            "title": "What is Pachyderm?",
+            "title": "Deploy Pachyderm Locally",
             "text": "step5.md"
         },
-        {   "title": "Access the Dashboard",
+        {   "title": "Creating Your First Pipeline",
             "text": "step6.md"
+        },
+        {   "title": "Add More Data and Combine Pipelines",
+            "text": "step7.md"
         }
     ],
     "intro": {

@@ -1,5 +1,3 @@
-## Deploy Pachyderm
-
 Pachyderm can run on any Kubernetes platform — both in the cloud
 or on premises.
 
