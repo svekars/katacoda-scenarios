@@ -1,7 +1,7 @@
 The following diagram describes high-level Pachyderm architecture.
 
 <pre>
-![Architecture Overview](/getting-started/assets/steps-Pachyderm-stack-diagram_latest.png)
+![Architecture Overview](/svekars/scenarios/getting-started/assets/steps-Pachyderm-stack-diagram_latest.png)
 </pre>
 
 Here are the steps of a typical Pachyderm workflow:
