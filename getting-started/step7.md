@@ -64,6 +64,3 @@ Let's create this pipeline:
 Verify that the pipeline was created:
 
 `pachctl list pipeline`{{execute}}
-
-
-
