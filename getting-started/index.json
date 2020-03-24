@@ -51,6 +51,7 @@
     "dashboards": [
        {"name": "Kubernetes UI", "port": 30000},
        {"name": "PachDash", "port": 30080}
+       {"name": "Ubuntu UI", "port": 5900}
     ]
   },
   "backend": {
