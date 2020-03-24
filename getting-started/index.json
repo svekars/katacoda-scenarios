@@ -50,12 +50,12 @@
     "uilayout": "terminal-iframe",
     "dashboards": [
        {"name": "Kubernetes UI", "port": 30000},
-       {"name": "PachDash", "port": 30080}
+       {"name": "PachDash", "port": 30080},
        {"name": "Ubuntu UI", "port": 5900}
     ]
   },
   "backend": {
           "port": 30000,
-          "imageid": "minikube-running"
+          "imageid": "ubuntu-desktop"
   }
 }
