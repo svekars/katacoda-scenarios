@@ -12,7 +12,7 @@ Let's look at the jobs and commits that were created for the files you
 have added in this tutorial:
 
 `pachctl list job
-pachctl list commit images@master` {{execute}}
+pachctl list commit images@master`{{execute}}
 
 Now, lets crate a `montage` pipeline that will stitch all the images
 that you have added in one collage.
@@ -28,7 +28,7 @@ Add the following montage specification:
   "pipeline": {
     "name": "montage"
   },
-  "description": "A pipeline that combines images from the `images` and `edges` repositories into a montage.",
+  "description": "A montage pipeline.",
   "input": {
     "cross": [ {
       "pfs": {
@@ -59,11 +59,11 @@ repositories together.
 
 Let's create this pipeline:
 
-`pachctl create pipeline -f montage.json` {{execute}}
+`pachctl create pipeline -f montage.json`{{execute}}
 
 Verify that the pipeline was created:
 
-`pachctl list pipeline` {{execute}}
+`pachctl list pipeline`{{execute}}
 
 
 
