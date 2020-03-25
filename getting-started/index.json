@@ -49,8 +49,8 @@
     "showdashboard": true,
     "uilayout": "terminal-iframe",
     "dashboards": [
-       {"name": "Kubernetes UI", "port": 30000},
-       {"name": "PachDash", "port": 30080},
+       {"name": "Kubernetes UI", "port": 80},
+       {"name": "PachDash", "port": 30080, "host": "host01"},
        {"name": "PachWS", "port": 30081},
        {"name": "Ubuntu UI", "port": 5900}
     ]
