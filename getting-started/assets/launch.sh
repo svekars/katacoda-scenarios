@@ -1,2 +1,0 @@
-minikube version
-minikube start
