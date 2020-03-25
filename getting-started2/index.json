@@ -1,0 +1,61 @@
+{
+  "title": "Getting Started with Pachyderm",
+  "description": "Want to learn how to do reproducible data science at scale? Learn the basics of Pachyderm, install in seconds, and try out a few basics steps.",
+  "difficulty": "beginner",
+  "time": "10 minutes",
+  "details": {
+    "steps": [
+        {
+            "title": "What is versioned control for data and why do I need it?",
+            "text": "step1.md"
+        },
+        {
+            "title": "What is versioned control for data and why do I need it?",
+            "text": "step2.md"
+        },
+        {
+            "title": "Pachyderm Overview",
+            "text": "step3.md"
+        },
+        {
+            "title": "Pachyderm Architecture",
+            "text": "step4.md"
+        },
+        {
+            "title": "Deploy Pachyderm Locally",
+            "text": "step5.md"
+        },
+        {   "title": "Creating Your First Pipeline",
+            "text": "step6.md"
+        },
+        {   "title": "Add More Data and Combine Pipelines",
+            "text": "step7.md"
+        }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "course.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [{"file": "launch.sh", "target": "/usr/bin/", "chmod": "+x"}]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal-iframe",
+    "dashboards": [
+       {"name": "Kubernetes UI", "port": 30000},
+       {"name": "PachDash", "port": 30080},
+       {"name": "Ubuntu UI", "port": 5900}
+    ]
+  },
+  "backend": {
+          "port": 30000,
+          "imageid": "minikube"
+  }
+}
