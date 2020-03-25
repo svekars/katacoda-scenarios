@@ -1,2 +1,2 @@
-ssh root@[[HOST1_IP]] "minikube status"
+ssh root@[[HOST1_IP]]:/root/.ssh/
 
