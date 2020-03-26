@@ -54,7 +54,8 @@
   },
   "backend": {
           "port": 30000,
-          "imageid": "minikube",
-          "environmentsprotocol": "http"
-  }
+          "imageid": "minikube"
+  },
+  "environmentsprotocol": "http",
+  "environmentsdomain": ".http-proxy.katacoda.com"
 }
