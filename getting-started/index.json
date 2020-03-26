@@ -56,5 +56,6 @@
   "backend": {
           "port": 30000,
           "imageid": "minikube"
-  }
+  },
+  "environmentsprotocol": "http"
 }
