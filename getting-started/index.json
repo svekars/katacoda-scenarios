@@ -34,7 +34,7 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "set-env.sh",
+      "code": "set-env",
       "courseData": "course.sh",
       "credits": ""
     },
@@ -42,7 +42,7 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [{"file": "launch.sh", "target": "/usr/bin/", "chmod": "+x"}]
+      "host01": [{"target": "/usr/bin/", "chmod": "+x"}]
     }
   },
   "environment": {
@@ -55,6 +55,6 @@
   },
   "backend": {
           "port": 30000,
-          "imageid": "kubernetes"
+          "imageid": "kubernetes-running"
   }
 }
