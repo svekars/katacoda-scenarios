@@ -42,7 +42,7 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [{"target": "/usr/bin/", "chmod": "+x"}]
+      "host01": [{"file": "launch.sh","target": "/usr/bin/", "chmod": "+x"}]
     }
   },
   "environment": {
