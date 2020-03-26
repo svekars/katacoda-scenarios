@@ -49,7 +49,7 @@
     "showdashboard": true,
     "uilayout": "terminal-iframe",
     "dashboards": [
-       {"name": "PachDash", "port": 30080}
+       {"name": "PachDash", "port": 30080, "host": "host01"}
     ]
   },
   "backend": {
