@@ -49,13 +49,12 @@
     "showdashboard": true,
     "uilayout": "terminal-iframe",
     "dashboards": [
-       {"name": "Kubernetes UI", "port": 80},
        {"name": "PachDash", "port": 30080, "port": 30081, "host": "host01"}
     ]
   },
   "backend": {
           "port": 30000,
-          "imageid": "minikube"
-  },
-  "environmentsprotocol": "http"
+          "imageid": "minikube",
+          "environmentsprotocol": "http"
+  }
 }
