@@ -34,7 +34,7 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "set-env",
+      "code": "set-env.sh",
       "courseData": "course.sh",
       "credits": ""
     },
@@ -55,6 +55,6 @@
   },
   "backend": {
           "port": 30000,
-          "imageid": "kubernetes"
+          "imageid": "kubernetes-running"
   }
 }
