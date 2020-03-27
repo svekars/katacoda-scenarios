@@ -1,13 +1,10 @@
 Pachyderm can run on any Kubernetes platform — both in the cloud
 or on premises.
 
-In this tutorial, we will deploy Pachyderm on a `minikube` cluster.
-`minikube` is already preinstalled in this environment.
+In this tutorial, we will deploy Pachyderm in a `minikube` cluster.
+Start `minikube` by running:
 
-You can check that `minikube` is running by executing the following
-command:
-
-`minikube version && minikube status`{{execute}}
+`minikube start`{{execute}}
 
 Before you can deploy Pachyderm, you need to install the Pachyderm
 client which you will later use to deploy Pachyderm.
