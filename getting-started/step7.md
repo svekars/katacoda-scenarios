@@ -46,7 +46,7 @@ Add the following montage specification:
   "transform": {
     "cmd": [ "sh" ],
     "image": "v4tech/imagemagick",
-    "stdin": [ "montage -shadow -background SkyBlue -geometry 300x300+2+2 $(find /pfs -type f | sort) /pfs/out/montage.png" ]
+    "stdin": [ "montage -shadow -background SkyBlue -geometry 300x300+2+2 $(find /pfs -type f | sort) pfs/out/montage.png" ]
   }
 }`{{execute}}
 
