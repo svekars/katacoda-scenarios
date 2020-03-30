@@ -25,7 +25,7 @@ Monitor container creation by running the following `watch` script:
 
 `watch -n 5 kubectl get pods`{{execute}}
 
-When all pods are running, press **CTL+C**.
+When all pods are running, run `clear`{{execute}}.
 
 Now, run `pachctl version` again to verify that both `pachctl`
 and `pachd` are installed.
