@@ -58,8 +58,7 @@ Open an `edges.yml` file for editing by running:
 
 Paste the following YAML specification:
 
-`---
-pipeline:
+`pipeline:
   name: edges
 description: An edge detection pipeline.
 transform:

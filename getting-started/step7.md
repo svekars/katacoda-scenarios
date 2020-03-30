@@ -24,8 +24,7 @@ fo editing:
 
 Add the following montage specification:
 
-`---
-pipeline:
+`pipeline:
   name: montage
 description: A montage pipeline.
 input:
