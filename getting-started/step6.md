@@ -69,8 +69,7 @@ transform:
 input:
   pfs:
     repo: images
-    glob: "/*"
-`{{execute}}
+    glob: "/*"`{{execute}}
 
 Save and exit by pressing `CTRL + O`, `ENTER`, and `CTRL + X`.
 

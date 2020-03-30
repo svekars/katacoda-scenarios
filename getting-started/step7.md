@@ -25,22 +25,22 @@ fo editing:
 Add the following montage specification:
 
 `pipeline:
-  name: montage
-description: A montage pipeline.
-input:
-  cross:
-  - pfs:
-      glob: "/"
-      repo: images
-  - pfs:
-      glob: "/"
-      repo: edges
-transform:
-  cmd:
-  - sh
-  image: v4tech/imagemagick
-  stdin:
-  - montage -shadow -background SkyBlue -geometry 300x300+2+2 $(find /pfs -type f | sort) pfs/out/montage.png`{{execute}}
+   name: montage
+ description: A montage pipeline.
+ input:
+   cross:
+   - pfs:
+       glob: "/"
+       repo: images
+   - pfs:
+       glob: "/"
+       repo: edges
+ transform:
+   cmd:
+   - sh
+   image: v4tech/imagemagick
+   stdin:
+   - montage -shadow -background SkyBlue -geometry 300x300+2+2 $(find /pfs -type f | sort) pfs/out/montage.png`{{execute}}
 
 The pipeline combines the data in `images` and `edges` repositories
 and creates a cross product of it.
