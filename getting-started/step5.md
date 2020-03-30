@@ -8,7 +8,8 @@ Verify `minikube` status by running:
 `minikube status`{{execute}}
 
 Before you can deploy Pachyderm, you need to install the Pachyderm
-client which you will later use to deploy Pachyderm.
+client, `pachctl`, which you will later use to deploy and manage
+Pachyderm.
 
 To deploy `pachctl`, run:
 

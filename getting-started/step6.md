@@ -64,12 +64,12 @@ description: An edge detection pipeline.
 transform:
   cmd:
   - python3
-  - "/edges.py"
+  - /edges.py
   image: pachyderm/opencv
 input:
   pfs:
     repo: images
-    glob: "/*"`{{execute}}
+    glob: /*`{{execute}}
 
 Save and exit by pressing `CTRL + O`, `ENTER`, and `CTRL + X`.
 
