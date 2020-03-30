@@ -28,7 +28,7 @@ Add the following montage specification:
   "pipeline": {
     "name": "montage"
   },
-  "description": "A pipeline that combines images from the `images` and `edges` repositories into a montage.",
+  "description": "A pipeline that creates a montage.",
   "input": {
     "cross": [ {
       "pfs": {
@@ -49,6 +49,8 @@ Add the following montage specification:
     "stdin": [ "montage -shadow -background SkyBlue -geometry 300x300+2+2 $(find /pfs -type f | sort) /pfs/out/montage.png" ]
   }
 }`{{execute}}
+
+Save and exit by pressing `CTRL + O`, `ENTER`, and `CTRL + X`.
 
 The pipeline combines the data in `images` and `edges` repositories
 and creates a cross product of it.
