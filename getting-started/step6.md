@@ -58,18 +58,22 @@ Open an `edges.yml` file for editing by running:
 
 Paste the following YAML specification:
 
-`pipeline:
-  name: edges
-description: An edge detection pipeline.
-transform:
-  cmd:
-  - python3
-  - /edges.py
-  image: pachyderm/opencv
-input:
-  pfs:
-    repo: images
-    glob: /*`{{execute}}
+`{
+  "pipeline": {
+    "name": "edges"
+  },
+  "description": "A pipeline that performs image edge detection by using the OpenCV library.",
+  "transform": {
+    "cmd": [ "python3", "/edges.py" ],
+    "image": "pachyderm/opencv"
+  },
+  "input": {
+    "pfs": {
+      "repo": "images",
+      "glob": "/*"
+    }
+  }
+}`{{execute}}
 
 Save and exit by pressing `CTRL + O`, `ENTER`, and `CTRL + X`.
 
