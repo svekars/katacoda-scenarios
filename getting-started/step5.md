@@ -4,7 +4,7 @@ or on premises.
 In this tutorial, we will deploy Pachyderm in a `minikube` cluster.
 Start `minikube` by running:
 
-`minikube start`{{execute}}
+`minikube status`{{execute}}
 
 Before you can deploy Pachyderm, you need to install the Pachyderm
 client which you will later use to deploy Pachyderm.

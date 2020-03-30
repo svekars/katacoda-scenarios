@@ -49,12 +49,12 @@
     "showdashboard": true,
     "uilayout": "terminal-iframe",
     "dashboards": [
-       {"name": "PachDash", "port": 30080, "host": "host01"}
+       {"name": "PachDash", "port": 30080}
     ]
   },
   "backend": {
           "port": 30000,
-          "imageid": "minikube"
+          "imageid": "minikube-running"
   },
   "environmentsprotocol": "http"
 }
