@@ -1,0 +1,46 @@
+{
+  "title": "Getting Started with Pachyderm",
+  "description": "Want to learn how to do reproducible data science at scale? Learn the basics of Pachyderm, install in seconds, and try out a few basics steps.",
+  "difficulty": "beginner",
+  "time": "10 minutes",
+  "details": {
+    "steps": [
+        {
+            "title": "Pachyderm Primitives",
+            "text": "step1.md"
+        },
+        {
+            "title": "What is Datum?",
+            "text": "step2.md"
+        },
+        {
+            "title": "How do I Decide Which Glob Pattern to Use?",
+            "text": "step3.md"
+        }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh",
+      "courseData": "course.sh",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [{"file": "launch.sh","target": "/usr/bin/", "chmod": "+x"}]
+    }
+  },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal-iframe",
+    "dashboards": [
+       {"name": "PachDash", "port": 30080}
+    ]
+  },
+  "backend": {
+          "port": 30000,
+          "imageid": "minikube-running"
+  },
+  "environmentsprotocol": "http"
+}
