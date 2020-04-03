@@ -1,6 +1,6 @@
 {
-  "title": "Getting Started with Pachyderm",
-  "description": "Want to learn how to do reproducible data science at scale? Learn the basics of Pachyderm, install in seconds, and try out a few basics steps.",
+  "title": "Introduction to Datums",
+  "description": "Learn how you can optimize your Pachyderm pipelines with datums",
   "difficulty": "beginner",
   "time": "10 minutes",
   "details": {

@@ -1,10 +1,7 @@
-Welcome to your first Pachyderm scenario!
-
 In this scenario you will learn:
 
-- What is data lineage and why it is important.
-- How Pachyderm implements data lineage.
-- How to add data to Pachyderm.
-- How to create a Pachyderm pipeline.
+- What is a Pachyderm datum and how to define it through a glob pattern.
+- What types of datums you can specify in your pipeline spec.
+- How to select the right glob pattern.
 
 ![Pachyderm logo](/svekars/scenarios/getting-started/assets/pachyderm_logo.png)
