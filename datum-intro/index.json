@@ -28,7 +28,7 @@
       "text": "finish.md"
     },
     "assets": {
-      "client": [{
+      "host01": [{
         "file": "launch.sh",
         "target": "/root",
         "chmod": "+x"
