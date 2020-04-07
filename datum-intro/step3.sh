@@ -1,0 +1,1 @@
+pachctl deploy local

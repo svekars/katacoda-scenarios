@@ -15,7 +15,8 @@
         },
         {
             "title": "How do I Decide Which Glob Pattern to Use?",
-            "text": "step3.md"
+            "text": "step3.md",
+	    "code": "step3.sh"
         }
     ],
     "intro": {
