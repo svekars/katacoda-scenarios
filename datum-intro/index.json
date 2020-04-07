@@ -28,7 +28,16 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [{"file": "launch.sh","target": "/usr/bin/", "chmod": "+x"}]
+      "client": [{
+        "file": "launch.sh",
+        "target": "/root",
+        "chmod": "+x"
+      }],
+      "host01": [{
+        "file": "install-pachyderm.sh",
+        "target": "/root",
+        "chmod": "+x"
+      }]
     }
   },
   "environment": {
