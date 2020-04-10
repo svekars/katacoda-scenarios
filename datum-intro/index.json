@@ -15,9 +15,13 @@
             "text": "step2.md"
         },
         {
-            "title": "How do I Decide Which Glob Pattern to Use?",
+            "title": "How workers process datums?",
             "text": "step3.md"
-        }
+        },
+        {
+            "title": "How do I Decide Which Glob Pattern to Use?",
+            "text": "step4.md"
+        },
     ],
     "intro": {
       "text": "intro.md",

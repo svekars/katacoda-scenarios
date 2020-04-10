@@ -1,25 +1,43 @@
-The following diagram describes high-level Pachyderm architecture.
+While in some cases, you can leave the datum parameter to its default ‘/’
+without compromising the performance of your pipelines, in other cases
+adjusting it to suffice your needs and your code could become absolutely
+crucial. Imagine that you have a 1TB dataset in which you only change
+individual files stored in their respective directories. It would be
+unwise to process the whole dataset over and over again instead of
+just processing that one file. That is when you have to choose the
+right datum parameter.
 
-![Architecture Overview](/svekars/scenarios/getting-started/assets/steps-Pachyderm-stack-diagram_latest.png)
+The glob pattern parameter selection majorly depends on the following
+criteria:
 
-Here are the steps of a typical Pachyderm workflow:
+The way your code processes the data.
+:    The user code must be written in such a way that it processes
+     each datum. Pachyderm is not aware of which directories and files
+     constitute a single datum, but the data scientist needs to write
+     the code so that everything that needs to be processed together
+     is added to the same datum. Another aspect of this is
 
-1. Data scientists leverage their preferred tools, programming languages,
-or integrated development environment (IDE) they like to define the steps
-of their data pipelines.
-1. Data pipelining tools assemble components to create an end-to-end data
-workflow. They define units of work that need be to processed in a specific
-sequence, parallelizing where possible.
-1. Pachyderm’s data orchestration layer receives a data workflow and
-guarantees its execution. It defines a set of workers (containers) that
-need to be created, sends those requests to Kubernetes, and ensures the
-correct data is made available to each worker. If any worker fails,
-Pachyderm’s data orchestration layer ensures that any processing being
-done by the failed worker is rescheduled and that all data is persisted
-effectively before moving on to the next steps of the workflow.
-1. Kubernetes receives work that needs to be scheduled from Pachyderm,
-spins up those containers, and schedules them with the appropriate
-resources as efficiently as possible.
-1. Cloud or on-prem resources such as compute, GPUs, object storage, and
-volumes are scaled and available for use.
+Available resources on each Kubernetes node.
+:    To process a datum, you must have enough resources in a Kubernetes
+     worker node. In some cases where a dataset is large and the computation
+     requires a significant amount of CPU or memory resources, processing the
+     whole dataset on one node might not be possible. Then, you can break down
+     your dataset into datums that can be processed one by one.
+
+Data parallelization
+:    If you have enough resources and multiple datums, Pachyderm can
+     distribute datums for processing on multiple workers. Pachyderm enables
+     you to configure the number of workers that you want to spin for each
+     pipeline by using the `parallelism` parameter in the pipeline
+     specification. This number again largely depends on the size of your
+     dataset and the way your code runs.
+
+The size of the datasets and what is updated in this dataset
+:    If you have a 5TB of data stored in two directories in thousands of
+     small size files, and you incrementally update individual files, you
+     most likely want to identify each file as a datum rather than the who
+     dataset as one datum. Because if you do the latter, every time you
+     update one file in this dataset, Pachyderm identifies the whole 5TB
+     as a new dataset and processes it all, while if you define each file
+     as a datum, Pachyderm will only process that small file.
 
