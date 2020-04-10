@@ -8,7 +8,7 @@ sudo dpkg -i /tmp/pachctl.deb
 chmod +x install-pachyderm.sh
 ./install-pachyderm.sh
 
-sleep 1
+wait
 
 chmod +x deploy-pipeline.sh
 ./deploy-pipeline.sh
