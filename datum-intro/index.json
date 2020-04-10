@@ -34,11 +34,12 @@
         "target": "/root",
         "chmod": "+x"
       }],
-      "host01": [{
-        "file": "install-pachyderm.sh",
-	"file": "deploy-pipeline.sh",
-        "target": "/root"
-      }]
+      "host01": [
+          { "file": "install-pachyderm.sh", "target": "/root", "chmod": "+x" },
+	  { "file": "deploy-pipeline.sh", "target": "/root", "chmod": "+x" },
+	  { "dir": "Cats1", "target": "/root" },
+	  { "dir": "Cats2", "target": "/root" }
+      ]
     }
   },
   "environment": {
