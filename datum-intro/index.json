@@ -15,8 +15,7 @@
         },
         {
             "title": "How do I Decide Which Glob Pattern to Use?",
-            "text": "step3.md",
-	    "code": "install-pachyderm.sh"
+            "text": "step3.md"
         }
     ],
     "intro": {
