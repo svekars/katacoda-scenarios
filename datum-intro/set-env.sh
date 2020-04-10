@@ -7,5 +7,8 @@ curl -o /tmp/pachctl.deb -L https://github.com/pachyderm/pachyderm/releases/down
 sudo dpkg -i /tmp/pachctl.deb
 chmod +x install-pachyderm.sh
 ./install-pachyderm.sh
+
+sleep 1
+
 chmod +x deploy-pipeline.sh
 ./deploy-pipeline.sh
