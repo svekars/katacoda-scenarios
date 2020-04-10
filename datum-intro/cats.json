@@ -1,0 +1,17 @@
+{
+  "pipeline": {
+    "name": "cats-combine"
+  },
+  "description": "Concatenate .csv files.",
+  "input": {
+    "pfs": {
+      "glob": "/",
+      "repo": "cats"
+    }
+  },
+  "transform": {
+    "cmd": [ "python3", "./combine-csv.py" ],
+    "image": "svekars/datums-cats:v9",
+    "debug": true
+  }
+}

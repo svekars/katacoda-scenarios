@@ -35,7 +35,7 @@
         "chmod": "+x"
       }],
       "host01": [{
-        "file": "install-pachyderm.sh",
+        "file": "install-pachyderm.sh, deploy-pipeline.sh",
         "target": "/root",
         "chmod": "+x"
       }]
