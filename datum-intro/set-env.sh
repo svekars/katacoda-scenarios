@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Installing pachctl..."
 launch.sh
 
 curl -o /tmp/pachctl.deb -L https://github.com/pachyderm/pachyderm/releases/download/v1.10.0/pachctl_1.10.0_amd64.deb
