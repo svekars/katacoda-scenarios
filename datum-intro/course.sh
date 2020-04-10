@@ -14,7 +14,7 @@ chmod +x install-pachyderm.sh
 #    sleep 5
 #done
 
-until timeout 1s ./etc/kube/check_ready.sh app=pachd; do sleep 1; done
+until timeout 1s ./check_ready.sh app=pachd; do sleep 1; done
 
 chmod +x deploy-pipeline.sh
 ./deploy-pipeline.sh
