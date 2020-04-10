@@ -29,16 +29,13 @@
       "text": "finish.md"
     },
     "assets": {
-      "host01": [{
-        "file": "launch.sh",
-        "target": "/root",
-        "chmod": "+x"
-      }],
       "host01": [
-          { "file": "install-pachyderm.sh", "target": "/root", "chmod": "+x" },
-	  { "file": "deploy-pipeline.sh", "target": "/root", "chmod": "+x" },
-	  { "dir": "Cats1", "target": "/root" },
-	  { "dir": "Cats2", "target": "/root" }
+	  { "file": "launch.sh", "target": "/root", "chmod": "+x" },
+          { "file": "install-pachyderm.sh", "target": "", "chmod": "+x" },
+	  { "file": "cats.json", "target": "/root", "chmod": "+x" },
+	  { "file": "deploy-pipeline.sh", "target": "~/", "chmod": "+x" },
+	  { "file": "Cats1/*.csv", "target": "~/Cats1/" },
+	  { "file": "Cats2/*.csv", "target": "~/Cats2/" }
       ]
     }
   },
