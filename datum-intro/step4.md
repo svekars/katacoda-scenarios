@@ -1,6 +1,6 @@
 While in some cases, you can leave the datum parameter to its default `/`
-without compromising the performance of your pipelines, in other cases
-adjusting it to suffice your needs and your code could become absoluteliy
+without compromising the performance of your pipelines, in other cases,
+adjusting it to suffice your code requirements could become absolutely
 crucial. Imagine that you have a 1TB dataset in which you only change
 individual files stored in their respective directories. It would be
 unwise to process the whole dataset over and over again instead of
@@ -10,21 +10,22 @@ right datum parameter.
 The glob pattern parameter selection majorly depends on the following
 criteria:
 
-* **The way your code processes the data**
+* **The way your code processes data**
 
-  The user code must be written in such a way that it processes
-  each datum. Pachyderm is not aware of which directories and files
-  constitute a single datum, but the data scientist needs to write
-  the code so that everything that needs to be processed together
-  is added to the same datum. Another aspect of this is
+  The user code must be written in such a way that it processes an indivisible
+  unit of work as a single datum. Pachyderm is not aware of which directories
+  and files constitute a single datum, but the data scientist needs to write
+  the code so that everything that must be processed together
+  is added to the same datum.
 
 * **Available resources on each Kubernetes node**
 
   To process a datum, you must have enough resources in a Kubernetes
   worker node. In some cases where a dataset is large and the computation
-  requires a significant amount of CPU or memory resources, processing the
-  whole dataset on one node might not be possible. Then, you can break down
-  your dataset into datums that can be processed one by one.
+  requires a significant amount of CPU, memory, or storage resources,
+  processing the whole dataset on one node might not be possible.
+  Then, you can break down your dataset into datums that can be
+  processed one by one.
 
 * **Data parallelization**
 
