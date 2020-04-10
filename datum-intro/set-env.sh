@@ -11,7 +11,9 @@ sleep 1
 chmod +x install-pachyderm.sh
 ./install-pachyderm.sh
 
-sleep 10
+while [ "$(kubectl get pod pachd -o jsonpath='{.status.containerStatuses[1].ready}')" != "true")]; do
+    sleep 5
+done
 
 chmod +x deploy-pipeline.sh
 ./deploy-pipeline.sh
