@@ -7,7 +7,7 @@
     "steps": [
         {
             "title": "Pachyderm Primitives",
-            "text": "step1.md",
+            "text": "step1.md"
         },
         {
             "title": "What is Datum?",
