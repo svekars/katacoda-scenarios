@@ -8,7 +8,7 @@
         {
             "title": "Pachyderm Primitives",
             "text": "step1.md",
-            "code": "courseBase.sh"
+            "code": "course.sh"
         },
         {
             "title": "What is Datum?",
