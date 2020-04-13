@@ -43,9 +43,9 @@
     },
     "assets": {
         "host01": [{"file": "launch.sh","target": "/usr/bin/", "chmod": "+x"},
-                   {"file": "roles.yaml", "target": "/home/packer/"},
-                   {"file": "traefik-daemonset.yaml", "target": "/home/packer/"},
-                   {"file": "traefik-ingress.yaml", "target": "/home/packer/"}]
+                   {"file": "roles.yaml", "target": "~/"},
+                   {"file": "traefik-daemonset.yaml", "target": "~/"},
+                   {"file": "traefik-ingress.yaml", "target": "~/"}]
     }
   },
   "environment": {
