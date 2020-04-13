@@ -1,35 +1,17 @@
-Pachyderm can run on any Kubernetes platform — both in the cloud
-or on premises.
+Although Pachyderm supports a wide variety of glob patterns that are
+similar to the Linux glob patterns, the following values are used
+most commonly:
 
-In this tutorial, we will deploy Pachyderm in a `minikube` cluster.
-`minikube` is preinstalled and running on this machine.
-Verify `minikube` status by running:
+* `/` — Pachyderm denotes the whole repository as a single datum
+and sends all of the input data to a single worker node to be
+processed together.
+* `/*` — Pachyderm defines each top-level filesystem object, that
+is a file or a directory, in the input repo as a separate datum.
+For example, if you have a repository with ten files in it and no
+directory structure, Pachyderm identifies each file as a single
+datum and processes them independently.
 
-`minikube status`{{execute}}
+* `/*/*` — Pachyderm processes each filesystem object in each
+subdirectory as a separate datum.
 
-Before you can deploy Pachyderm, you need to install the Pachyderm
-client, `pachctl`, which you will later use to deploy and manage
-Pachyderm.
-
-To deploy `pachctl`, run:
-
-`curl -o /tmp/pachctl.deb -L https://github.com/pachyderm/pachyderm/releases/download/v1.10.0/pachctl_1.10.0_amd64.deb && sudo dpkg -i /tmp/pachctl.deb`{{execute}}
-
-Verify that `pachctl` has been installed by running the following command:
-
-`pachctl version --client-only`{{execute}}
-
-After `pachctl` is installed, deploy Pachyderm by running:
-
-`pachctl deploy local`{{execute}}
-
-Monitor container creation by running the following `watch` script:
-
-`watch -n 5 kubectl get pods`{{execute}}
-
-When all pods are running, run `CTRL + C`.
-
-Now, run `pachctl version` again to verify that both `pachctl`
-and `pachd` are installed.
-
-`pachctl version`{{execute}}
+Let's see how this works on a particular example. 

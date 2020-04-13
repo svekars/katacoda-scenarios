@@ -1,88 +1,49 @@
-Now, that you have Pachyderm up and running, let's
-try to create our first Pachyderm pipeline. This
-pipeline will perform basic image edge detection
-by using the OpenCV Library.
+**Note: Wait until the environment is set up before running
+this example.**
 
-First, we need to create an input repository in which
-the data that you want to process will be stored. Let's
-create a repo called `images` by running the following
-command:
+Let's imagine you have `.csv` files in which you
+store cats breeds and you have a Pachyderm pipeline
+that runs a script that combines these files in one.
 
-`pachctl create repo images`{{execute}}
 
-Verify that the repository was successfully created:
+In this tutorial, we have already preconfigured this
+pipeline.
 
-`pachctl list repo`{{execute}}
-
-Now, let's add some data to this repository:
-
-`pachctl put file images@master:liberty.png -f http://imgur.com/46Q8nDz.png`{{execute}}
-
-Verify that the file was added by running:
-
-`pachctl list file images@master`{{execute}}
-
-Now, let's create a pipeline that will perform edge detection.
-A minimum Pachyderm pipelines needs a code that performs
-desired computations and a pipeline specification in YAML
-or JSON format.
-
-Open an `edges.py` file for editing:
-
-`nano edges.py`{{execute}}
-
-Add the following Python code:
-
-`import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-import os
-def make_edges(image):
-   img = cv2.imread(image)
-   tail = os.path.split(image)[1]
-   edges = cv2.Canny(img,100,200)
-   plt.imsave(os.path.join("/pfs/out", os.path.splitext(tail)[0]+'.png'), edges, cmap = 'gray')
-for dirpath, dirs, files in os.walk("/pfs/images"):
-   for file in files:
-       make_edges(os.path.join(dirpath, file))`{{execute}}
-
-The code above checks all `.png` files in the directory and uses the `Canny`
-algorithm to detect edges on the image.
-
-Save and exit by pressing `CTRL + O`, `ENTER`, and `CTRL + X`.
-
-Now, let's create the pipeline spec.
-Open an `edges.yml` file for editing by running:
-
-`nano edges.yml`{{execute}}
-
-Paste the following YAML specification:
-
-`{
-  "pipeline": {
-    "name": "edges"
-  },
-  "description": "A pipeline that performs image edge detection by using the OpenCV library.",
-  "transform": {
-    "cmd": [ "python3", "/edges.py" ],
-    "image": "pachyderm/opencv"
-  },
-  "input": {
-    "pfs": {
-      "repo": "images",
-      "glob": "/*"
-    }
-  }
-}`{{execute}}
-
-Save and exit by pressing `CTRL + O`, `ENTER`, and `CTRL + X`.
-
-When you have your code and the pipeline spec ready, you
-can create your pipeline by running:
-
-`pachctl create pipeline -f edges.yml`{{execute}}
-
-Verify that Pachyderm has created your first pipeline:
-
+View the list of existing pipelines in this environment:
 `pachctl list pipeline`{{execute}}
 
+You should see the `cats` pipeline successfully running.
+
+Get the list of repositories and the list of files in each
+repository:
+
+`pachctl list repo && pachctl list file cats@master`{{execute}}
+
+As you can see, there are two directories in the `cats`
+repository `Cats1` and `Cats2`. Let's view the files in each
+of this repositories:
+
+`pachctl list file cats@master:Cats1 && pachctl list file cats@master:Cats2`{{execute}}
+
+**Output:**
+
+```
+NAME                     TYPE SIZE
+/Cats1/Calico.csv        file 6.073KiB
+/Cats1/Scottish-Fold.csv file 8.413KiB
+/Cats1/Siamese.csv       file 12.05KiB
+NAME                    TYPE SIZE
+/Cats2/Abyssinian.csv   file 6.702KiB
+/Cats2/Bengal.csv       file 8.414KiB
+/Cats2/Russian-Blue.csv file 8.924KiB
+```
+
+You have three `.csv` files that correspond to a cat bread
+in each directory.
+
+Finally, let's print the contents of a file in the terminal:
+
+`pachctl get file cats@master:Cats1/Calico.csv`{{execute}}
+
+All other files have similar content with the corresponding
+to the bread data.

@@ -1,68 +1,73 @@
-Let's add more files to your repository and compile a montage of those images.
+Let's check which pipeline spec was used to create this pipeline:
 
-Run:
+`pachctl inspect pipeline cats-combine`{{execute}}
 
-`pachctl put file images@master:AT-AT.png -f http://imgur.com/8MN9Kg0.png
-pachctl put file images@master:kitten.png -f http://imgur.com/g2QnNqa.png`{{execute}}
+Among other information, you should see the input of the pipeline:
 
-Every time you add data to a Pachyderm repo, Pachyderm starts a new job
-and creates a commit.
-
-Let's look at the jobs and commits that were created for the files you
-have added in this tutorial:
-
-`pachctl list job
-pachctl list commit images@master`{{execute}}
-
-Now, lets crate a `montage` pipeline that will stitch all the images
-that you have added in one collage.
-
-First let's create the pipeline specification. Open the `montage.json`
-fo editing:
-
-`nano montage.json`{{execute}}
-
-Add the following montage specification:
-
-`{
-  "pipeline": {
-    "name": "montage"
-  },
-  "description": "A pipeline that creates a montage.",
-  "input": {
-    "cross": [ {
-      "pfs": {
-        "glob": "/",
-        "repo": "images"
-      }
-    },
-    {
-      "pfs": {
-        "glob": "/",
-        "repo": "edges"
-      }
-    } ]
-  },
-  "transform": {
-    "cmd": [ "sh" ],
-    "image": "v4tech/imagemagick",
-    "stdin": [ "montage -shadow -background SkyBlue -geometry 300x300+2+2 $(find /pfs -type f | sort) /pfs/out/montage.png" ]
+```
+Input:
+{
+  "pfs": {
+    "name": "cats",
+    "repo": "cats",
+    "branch": "master",
+    "glob": "/"
   }
-}`{{execute}}
+}
+```
 
-Save and exit by pressing `CTRL + O`, `ENTER`, and `CTRL + X`.
+As you can see the `glob` parameter is set to "/", which means
+all directories and files are processed as one unit. 
 
-The pipeline combines the data in `images` and `edges` repositories
-and creates a cross product of it.
-This specification already includes the code that the pipeline will
-run in the `stdin` field. The pipeline will run the `montage` command
-from the ImageMagick software to combine all images in these two
-repositories together.
+You can preview what will constitues a single datum by using the
+`pachctl glob file` command.
 
-Let's create this pipeline:
+For example, if you want to check what will go into one datum if
+you set `glob` to `/`, run:
 
-`pachctl create pipeline -f montage.json`{{execute}}
+`master $ pachctl glob file cats@master:/`{{execute}}
 
-Verify that the pipeline was created:
+**Output:**
 
-`pachctl list pipeline`{{execute}}
+`NAME TYPE SIZE
+/    dir  50.58KiB`
+
+As you can see in the output, the /root directory constitutes a signle
+datum.
+
+Now, let's see what will go into one datum if you set `glob` to `/*`:
+
+`pachctl glob file cats@master:/*`{{execute}}
+
+**Output:**
+
+```
+NAME   TYPE SIZE
+/Cats1 dir  26.54KiB
+/Cats2 dir  24.04KiB
+```
+
+Now you have two datums - `Cats1` and `Cats2`. If you change something
+in the `Cats1` directory, only that directory will be processed and the
+other will be skipped as Pachyderm won't detect any changes.
+
+Let's see what happens if you set `glob` to `/*/*`:
+
+`achctl glob file cats@master:/*/*`{{execute}}
+
+**Output:**
+
+```
+NAME                     TYPE SIZE
+/Cats1/Calico.csv        file 6.073KiB
+/Cats1/Scottish-Fold.csv file 8.413KiB
+/Cats1/Siamese.csv       file 12.05KiB
+/Cats2/Abyssinian.csv    file 6.702KiB
+/Cats2/Bengal.csv        file 8.414KiB
+/Cats2/Russian-Blue.csv  file 8.924KiB
+```
+
+Now, each file is a datum. And only the file that was changed will be
+processed by the pipeline.
+
+Let's change a file and experiment with the `glob` parameter.
