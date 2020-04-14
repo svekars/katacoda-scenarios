@@ -34,9 +34,15 @@ and `pachd` are installed.
 
 `pachctl version`{{execute}}
 
+Then run this.
+
 `kubectl apply -f /root/roles.yaml`{{execute}}
+
+Then run this.
 
 `kubectl apply -f /root/traefik-daemonset.yaml`{{execute}}
 
+Then run this. 
+    
 `sed s/host01/[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]/g < /root/traefik-ingress-minikube.yaml | kubectl apply -f -`{{execute}}
 
