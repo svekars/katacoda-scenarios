@@ -33,3 +33,10 @@ Now, run `pachctl version` again to verify that both `pachctl`
 and `pachd` are installed.
 
 `pachctl version`{{execute}}
+
+`kubectl apply -f /root/roles.yaml`{{execute}}
+
+`kubectl apply -f /root/traefik-daemonset.yaml`{{execute}}
+
+`sed s/host01/[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]/g < /root/traefik-ingress-minikube.yaml | kubectl apply -f -`{{execute}}
+
