@@ -1,4 +1,4 @@
-Now that we know the structure of our repository and files, 
+Now tha we know the structure of our repository and files, 
 let's try to update some of the files with different `glob`
 settings and see how Pachyderm will process them.
 
@@ -15,7 +15,7 @@ In the **Progress** bar, you can see the number of datums
 that were processed and skipped. In this job run, Pachyderm
 processed one datum and skipped one datum respectively:
 
-![Jobs](svekars/scenarios/datum-intro/assets/job1.png)
+![Jobs](/svekars/scenarios/datum-intro/assets/job1.png)
 
 To get more detailed information about processed datums,
 run `pachctl list datum` with the corresponding job ID:
@@ -32,24 +32,17 @@ Find the `"glob"` and change it to `/*`.
 
 As soon as you save your changes, the pipeline starts a job
 with the new changes.
-If you run `pachctl list pipeline`, you will see that the pipeline
+If you run `pachctl list pipeline`{{execute}}, you will see that the pipeline
 version has been updated to `2`.
 
 Run `pachctl list job -p cats-combine --history all` to see
 that Pachyderm has processed two datums:
 
-![two datums](svekars/scenarios/datum-intro/assets/two-datums.png)
+![two datums](/svekars/scenarios/datum-intro/assets/two-datums.png)
 
 Finally, run `pachctl list datum <ID> --raw` to see that
 Pachyderm has processed two datums - one is the `Cats1` directory
 and the other is `Cats2`.
 
 Now, let's modify a file and see how many datums the pipeline will
-process. 
-
-
-
-
-
-
-
+process.

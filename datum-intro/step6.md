@@ -20,7 +20,7 @@ repository:
 `pachctl list repo && pachctl list file cats@master`{{execute}}
 
 As you can see, there are two directories in the `cats`
-repository `Cats1` and `Cats2`. Let's view the files in each
+repository `/Cats1` and `/Cats2`. Let's view the files in each
 of this repositories:
 
 `pachctl list file cats@master:Cats1 && pachctl list file cats@master:Cats2`{{execute}}
@@ -32,10 +32,10 @@ NAME                     TYPE SIZE
 /Cats1/Calico.csv        file 6.073KiB
 /Cats1/Scottish-Fold.csv file 8.413KiB
 /Cats1/Siamese.csv       file 12.05KiB
-NAME                    TYPE SIZE
-/Cats2/Abyssinian.csv   file 6.702KiB
-/Cats2/Bengal.csv       file 8.414KiB
-/Cats2/Russian-Blue.csv file 8.924KiB
+NAME                     TYPE SIZE
+/Cats2/Abyssinian.csv    file 6.702KiB
+/Cats2/Bengal.csv        file 8.414KiB
+/Cats2/Russian-Blue.csv  file 8.924KiB
 ```
 
 You have three `.csv` files that correspond to a cat bread

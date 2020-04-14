@@ -53,7 +53,7 @@ other will be skipped as Pachyderm won't detect any changes.
 
 Let's see what happens if you set `glob` to `/*/*`:
 
-`achctl glob file cats@master:/*/*`{{execute}}
+`pachctl glob file cats@master:/*/*`{{execute}}
 
 **Output:**
 

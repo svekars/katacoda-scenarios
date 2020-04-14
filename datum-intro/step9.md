@@ -1,4 +1,4 @@
-Let's update the file `Cats1/Calico.csv` and see how the pipeline
+Let's update the file `/Cats1/Calico.csv` and see how the pipeline
 processes these changes:
 
 `vi Cats1/Calico.csv`{{execute}}
@@ -15,7 +15,7 @@ View the list of jobs by running:
 
 You should see one processed datum and one skipped:
 
-![glob-one-asterisk](svekars/scenarios/datum-intro/assets/glob-one-asterisk.png)
+![glob-one-asterisk](/svekars/scenarios/datum-intro/assets/glob-one-asterisk.png)
 
 You can also run `pachctl list datum -p cats-combine --raw`{{execute}} to see more
 detailed information about the two processed datums.
@@ -44,7 +44,7 @@ Let's see how many datums Pachyderm is processing this time:
 You should see that Pachyderm processed only one datum, skipped five, and
 uploaded and downloaded `12.75KiB` of data.
 
-![glob-double-asterisk](svekars/scenarios/datum-intro/assets/glob-double-asterisk.png)
+![glob-double-asterisk](/svekars/scenarios/datum-intro/assets/glob-double-asterisk.png)
 
 While for small datasets, like the one we are using in this example, the
 difference in processing the whole dataset or only parts of it is
@@ -53,4 +53,3 @@ datasets.
 
 Try out our [Datum II: Cross, Union, and Join]() tutorial to learn
 how you can use the glob pattern with multi-input pipelines.
-
