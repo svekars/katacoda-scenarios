@@ -51,13 +51,6 @@
         ]
     }
   },
-  "environment": {
-    "showdashboard": true,
-    "uilayout": "terminal-iframe",
-    "dashboards": [
-       {"name": "PachDash", "port": 30080}
-    ]
-  },
   "backend": {
           "port": 30000,
           "imageid": "minikube-running"

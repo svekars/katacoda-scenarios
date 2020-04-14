@@ -46,3 +46,8 @@ Then run this.
     
 `sed s/host01/[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]/g < /root/traefik-ingress-minikube.yaml | kubectl apply -f -`{{execute}}
 
+And open [this link](http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]/?port=80&path=ws) in a new tab
+
+http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]/?port=80&path=ws
+
+
