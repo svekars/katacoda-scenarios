@@ -1,4 +1,4 @@
-Let's check which pipeline spec was used to create this pipeline:
+Let's check the specification that was used to create this pipeline:
 
 `pachctl inspect pipeline cats-combine`{{execute}}
 
@@ -19,7 +19,7 @@ Input:
 As you can see the `glob` parameter is set to "/", which means
 all directories and files are processed as one unit. 
 
-You can preview what will constitues a single datum by using the
+You can preview what will constitutes a single datum by using the
 `pachctl glob file` command.
 
 For example, if you want to check what will go into one datum if
@@ -47,7 +47,7 @@ NAME   TYPE SIZE
 /Cats2 dir  24.04KiB
 ```
 
-Now you have two datums - `Cats1` and `Cats2`. If you change something
+Now you have two datums — `Cats1` and `Cats2`. If you change something
 in the `Cats1` directory, only that directory will be processed and the
 other will be skipped as Pachyderm won't detect any changes.
 

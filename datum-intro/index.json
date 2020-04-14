@@ -21,6 +21,26 @@
         {
             "title": "How do I Decide Which Glob Pattern to Use?",
             "text": "step4.md"
+        },
+        {
+             "title": "Frequently used Glob Patterns",
+             "text": "step5.md"
+        },
+        {
+             "title": "Example: Pipeline Description",
+             "text": "step6.md"
+        },
+        {
+             "title": "Example: How to Preview a Glob Pattern",
+             "text": "step7.md"
+        },
+        {
+             "title": "Example: Updating a Pipeline",
+             "text": "step8.md"
+        },
+        {
+              "title": "Example: Updating Files",
+              "text": "step9.md"
         }
     ],
     "intro": {
