@@ -2,7 +2,8 @@ Let's check the specification that was used to create this pipeline:
 
 `pachctl inspect pipeline cats-combine`{{execute}}
 
-Among other information, you should see the input of the pipeline:
+Among other information, you can see the `glob` parameter
+in the input section of the pipeline spec:
 
 ```
 Input:
@@ -16,23 +17,23 @@ Input:
 }
 ```
 
-As you can see the `glob` parameter is set to "/", which means
-all directories and files are processed as one unit. 
+`glob` is set to `/`, which means
+all directories and files are processed as one unit, or datum.
 
-You can preview what will constitutes a single datum by using the
+You can preview what will constitute a single datum by using the
 `pachctl glob file` command.
 
 For example, if you want to check what will go into one datum if
 you set `glob` to `/`, run:
 
-`master $ pachctl glob file cats@master:/`{{execute}}
+`pachctl glob file cats@master:/`{{execute}}
 
 **Output:**
 
 `NAME TYPE SIZE
 /    dir  50.58KiB`
 
-As you can see in the output, the /root directory constitutes a signle
+As you can see in the output, the root directory is a signle
 datum.
 
 Now, let's see what will go into one datum if you set `glob` to `/*`:
@@ -67,7 +68,8 @@ NAME                     TYPE SIZE
 /Cats2/Russian-Blue.csv  file 8.924KiB
 ```
 
-Now, each file is a datum. And only the file that was changed will be
-processed by the pipeline.
+Now, each file is a datum, and only the file (or files) that was
+changed will be processed by the pipeline.
 
-Let's change a file and experiment with the `glob` parameter.
+Let's change the `glob` parameter in the `cats` pipeline
+and see how many datums each new job will process.

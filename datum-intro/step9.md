@@ -3,7 +3,10 @@ processes these changes:
 
 `vi Cats1/Calico.csv`{{execute}}
 
-Modify the file by removing the last row — row 6.
+Modify the file by removing the last row — row 6. We are using
+`vi` to open this file, therefore, press the `d` button twice
+to delete the whole line. Then, press `wq`{{execute}} to save
+and exit.
 Replace the file by the same name in the Pachyderm repo:
 
 `pachctl put file cats@master:Cats1/Calico.csv -f Cats1/Calico.csv`{{execute}}
@@ -17,7 +20,7 @@ You should see one processed datum and one skipped:
 
 ![glob-one-asterisk](/svekars/scenarios/datum-intro/assets/glob-one-asterisk.png)
 
-You can also run `pachctl list datum -p cats-combine --raw`{{execute}} to see more
+You can also run `pachctl list datum <job-ID> --raw`{{execute}} to see more
 detailed information about the two processed datums.
 
 Now, let's modify the glob pattern in the pipeline to `/*/*`. This setting
@@ -25,21 +28,23 @@ means that every file in the `/Cats1` or `/Cats2` directory will be considered
 a single datum. Because we have three files in `/Cats1` and three files in
 `/Cats2`, we have a total of six datums when we set `glob` to `/*/*`.
 
-After you modify the pipeline spec, Pachyderm starts a job and processes six
-datums for this pipeline:
+To modify the pipeline, run `pachctl edit pipeline cats-combine`{{execute}}
 
-Let's modify the `/Cats2/Abyssinian.csv` file by deleting the last row, the row
-number 5.
+After you modify the pipeline spec, Pachyderm starts a job and reprocesses six
+datums for this pipeline.
+
+Let's modify the `/Cats2/Abyssinian.csv` file by deleting the last row — row 5.
 
 `vi Cats2/Abyssinian.csv`{{execute}}
 
-Save the file and replace the corresponding file in the repository:
+Delete the line by pressing `d` twice, save the file by typing `:wq!`, and
+then, replace the corresponding file in the repository:
 
 `pachctl put file cats@master:Cats2/Abyssinian.csv -f Cats2/Abyssinian.csv`{{execute}}
 
 Let's see how many datums Pachyderm is processing this time:
 
-`pachctl list job -p cats-combine`
+`pachctl list job -p cats-combine`{{execute}}
 
 You should see that Pachyderm processed only one datum, skipped five, and
 uploaded and downloaded `12.75KiB` of data.
