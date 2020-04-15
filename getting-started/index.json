@@ -58,11 +58,12 @@
     "uilayout": "terminal-iframe",
     "dashboards": [
        {"name": "PachDash", "href": "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/?port=80&path=ws"}
-    ]
+    ],
+    "environmentsprotocol": "http"
   },
   "backend": {
-          "port": 30000,
-          "imageid": "minikube-running"
+    "port": 30000,
+    "imageid": "minikube-running"
   },
   "environmentsprotocol": "http"
 }
