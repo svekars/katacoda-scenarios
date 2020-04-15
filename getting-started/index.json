@@ -23,11 +23,11 @@
         },
         {
             "title": "Deploy Pachyderm Locally",
-            "text": "step5.md",
-            "code": "step5.sh"
+            "text": "step5.md"
         },
         {   "title": "Creating Your First Pipeline",
-            "text": "step6.md"
+            "text": "step6.md",
+            "code": "step6.sh"
         },
         {   "title": "Add More Data and Combine Pipelines",
             "text": "step7.md"
