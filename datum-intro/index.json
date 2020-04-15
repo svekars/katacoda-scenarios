@@ -58,7 +58,7 @@
       "host01": [
 	  { "file": "launch.sh", "target": "~/", "chmod": "+x" },
       { "file": "check_ready.sh", "target": "~/", "chmod": "+x" },
-      { "file": "print.py", "target": "~/", "chmod": "+x" }
+      { "file": "print.py", "target": "~/", "chmod": "+x" },
       { "file": "deploy-pipeline.sh", "target": "~/", "chmod": "+x" },
       { "file": "install-pachyderm.sh", "target": "~/", "chmod": "+x" },
 	  { "file": "cats.json", "target": "~/", "chmod": "+x" },
