@@ -41,9 +41,12 @@ NAME                     TYPE SIZE
 You have three `.csv` files that correspond to a cat bread
 in each directory.
 
-Finally, let's print the contents of a file in the terminal:
+Finally, let's print the contents of one of those files in
+the terminal:
 
 `pachctl get file cats@master:Cats1/Calico.csv`{{execute}}
 
-All other files have similar content with the corresponding
-to the bread data.
+You can see that the file has columns and rows with information
+about cats of a particular breed, including the age, gender, size, coat,
+and other parameters. All other files have similar content corresponding
+to the eponymous breed.
