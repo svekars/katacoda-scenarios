@@ -2,6 +2,8 @@ Now, that you have Pachyderm up and running, you can
 access the Pachyderm dashboard by using this address:
 http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]/?port=80&path=ws
 
+**Note:** In this tutorial, you must use `http` to access the UI.
+
 Type your email address to activate the free trial
 for your dashboard.
 

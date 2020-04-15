@@ -1,6 +1,10 @@
 **Note: Wait until the environment is set up before running
 this example.**
 
+When environment is ready, Pachyderm UI is avaialable
+at http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]/?         port=80&path=ws. In this tutorial, you must use
+`http` to access the UI.
+
 Let's imagine you have `.csv` files in which you
 store cats breeds and you have a Pachyderm pipeline
 that runs a script that combines these files in one.
