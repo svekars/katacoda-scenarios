@@ -23,7 +23,8 @@
         },
         {
             "title": "Deploy Pachyderm Locally",
-            "text": "step5.md"
+            "text": "step5.md",
+            "code": "step5.sh"
         },
         {   "title": "Creating Your First Pipeline",
             "text": "step6.md"
@@ -44,6 +45,7 @@
     "assets": {
         "host01": [
             {"file": "launch.sh","target": "/usr/bin/", "chmod": "+x"},
+            {"file": "check_ready.sh", "target": "~/", "chmod": "+x"},
             {"file": "roles.yaml", "target": "/root/", "chmod": "+rw"},
             {"file": "traefik-daemonset.yaml", "target": "/root/", "chmod": "+rw"},
             {"file": "configure_ingress.sh", "target": "/usr/local/bin/", "chmod": "+x"},
@@ -55,7 +57,7 @@
     "showdashboard": true,
     "uilayout": "terminal-iframe",
     "dashboards": [
-       {"name": "PachDash", "port": 80}
+       {"name": "PachDash", "href": "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/?port=80&path=ws"}
     ]
   },
   "backend": {
