@@ -50,6 +50,12 @@ Add the following montage specification:
   }
 }`{{execute}}
 
+The script in the `"stdin"` field must be in one line. If you are on a
+small screen, the script could have been pasted incorrectly. If part of
+the  script, especially everything after `sort)`, jumped to the next line,
+move the cursor to the beginning of that line and click **Backspace** or
+**Delete** to move the line up.
+
 Save and exit by pressing `CTRL + O`, `ENTER`, and `CTRL + X`.
 
 The pipeline combines the data in `images` and `edges` repositories
@@ -66,3 +72,7 @@ Let's create this pipeline:
 Verify that the pipeline was created:
 
 `pachctl list pipeline`{{execute}}
+
+Go to the UI to view the result in the `montage` repository:
+
+![montage](/svekars/scenarios/getting-started/assets/montage.png)

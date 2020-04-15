@@ -1,5 +1,11 @@
-Now, that you have Pachyderm up and running, let's
-try to create our first Pachyderm pipeline. This
+Now, that you have Pachyderm up and running, you can
+access the Pachyderm dashboard by using this address:
+http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]/?port=80&path=ws
+
+Type your email address to activate the free trial
+for your dashboard.
+
+Let's try to create our first Pachyderm pipeline. This
 pipeline will perform basic image edge detection
 by using the OpenCV Library.
 
@@ -86,3 +92,16 @@ Verify that Pachyderm has created your first pipeline:
 
 `pachctl list pipeline`{{execute}}
 
+View the result of the pipeline run:
+
+1. Go to the [UI](http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]/?      port=80&path=ws).
+1. Click **Repos** > **edges**.
+
+   You should see one file committed to this repository. You might need to
+   wait or refresh your page for the file to display.
+
+1. Click **`1 data file` > liberty.png**
+
+   The processed file should appear in the right-side of the screen.
+
+   ![liberty-processed](/svekars/scenarios/getting-started/assets/liberty-processed.png)
