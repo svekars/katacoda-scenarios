@@ -14,4 +14,5 @@ datum and processes them independently.
 * `/*/*` — Pachyderm processes each filesystem object in each
 subdirectory as a separate datum.
 
-Let's see how this works on a particular example. 
+To help us get a better understanding of datums, let's try out
+the examples on the next screens.

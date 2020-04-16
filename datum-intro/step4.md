@@ -13,7 +13,7 @@ criteria:
 * **The way your code processes data**
 
   The user code must be written in such a way that it processes an indivisible
-  unit of work as a single datum. Pachyderm is not aware of which directories
+  unit of work as a single datum. Pachyderm does not know which directories
   and files constitute a single datum, but the data scientist needs to write
   the code so that everything that must be processed together
   is added to the same datum.
@@ -39,9 +39,9 @@ criteria:
 * **The size of the datasets and what is updated in this dataset**
 
   If you have a 5TB of data stored in two directories in thousands of
-  small size files, and you incrementally update individual files, you
-  most likely want to identify each file as a datum rather than the who
-  dataset as one datum. Because if you do the latter, every time you
-  update one file in this dataset, Pachyderm identifies the whole 5TB
-  as a new dataset and processes it all, while if you define each file
-  as a datum, Pachyderm will only process that small file.
+  small files, and you incrementally update individual files, you
+  might want to store the files that are updated together in
+  sub-directories and define a sub-directory as a datum, so
+  that only the changed files are processed. There could be
+  other options based on your specific use case, but certaintly
+  you don't want to process the whole 5TB dataset every time.
