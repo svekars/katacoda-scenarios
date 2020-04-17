@@ -24,7 +24,7 @@ the `glob` verification command against the `test` repository in the terminal.
 
 >> For `/*/*`: <<
 
-=== 7
+=== 6
 
 >> For `/*/*/*`: <<
 
