@@ -12,13 +12,19 @@
 
 >>3. You have a `test` repository configured on this machine. Type the correct number of datums for the following glob patterns. Verify the by running the `glob` verification command against the test repository in the terminal. <<
 
->> For `/`:
+>> For `/`: <<
 === 1
->> For `/*`:
+
+>> For `/*`: <<
 === 3
->> For `/*/*`:
+
+>> For `/*/*`: <<
+
 === 7
->> For `/*/*/*`:
+
+>> For `/*/*/*`: <<
+
 === 10
->> For `/*/*/*/*`
+
+>> For `/*/*/*/*`: <<
 === 0
