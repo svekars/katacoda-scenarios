@@ -83,7 +83,7 @@
     "showdashboard": true,
     "uilayout": "terminal-iframe",
     "dashboards": [
-       {"name": "PachDash", "port": 30080}
+       {"name": "PachDash", "href": "http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/?port=80&path=ws"}
     ]
   },
   "backend": {
