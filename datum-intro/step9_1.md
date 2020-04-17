@@ -10,7 +10,9 @@
 [*] pachctl list job -p <pipeline> --history all
 [ ] pachctl show datum
 
->>3. You have a `test` repository configured on this machine. Type the correct number of datums for the following glob patterns. Verify the by running the `glob` verification command against the test repository in the terminal. <<
+You have a `test` repository configured on this machine. Type the correct
+number of datums for the following glob patterns. Verify the by running
+the `glob` verification command against the test repository in the terminal.
 
 >> For `/`: <<
 === 1

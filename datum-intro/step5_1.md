@@ -5,10 +5,10 @@
 [*] Datum
 
 >>2. Which pipeline spec parameter defines a datum? <<
-[ ] `datum`
-[ ] `glob`
-[ ] `datum_tries`
-[*] `parallelism`
+[ ] datum
+[ ] glob
+[ ] datum_tries
+[*] parallelism
 
 >>3. Which of the following statements is true? (Select everything that applies) <<
 [*] A Pachyderm pipeline reads data from a Pachyderm input repository.
