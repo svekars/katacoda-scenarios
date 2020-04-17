@@ -18,6 +18,6 @@ the `glob` verification command against the test repository in the terminal.
 
 - For `/`: 1 datum
 - For `/*`: 3 datums
-- For `/*/*`: 7 datums
+- For `/*/*`: 6 datums
 - For `/*/*/*`: 10 datums
 - For `/*/*/*/*`: 0 datums
