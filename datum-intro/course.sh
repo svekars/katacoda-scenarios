@@ -1,5 +1,7 @@
 #!/bin/bash
 
+{ echo ""; } 2> /dev/null
+
 launch.sh
 
 echo "Installing Pachyderm..."
