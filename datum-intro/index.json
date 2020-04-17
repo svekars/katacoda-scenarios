@@ -28,8 +28,12 @@
         },
         {
              "title": "Quiz",
-             "text": "step5_1.md",
-             "verify": "step5-verify.sh"
+             "text": "step5_1.md"
+        },
+        {
+              "title": "Answers",
+              "text": "step5_2.md",
+              "verify": "step5-verify.sh"
         },
         {
              "title": "Example: Pipeline Description",
@@ -52,6 +56,10 @@
               "title": "Quiz",
               "text": "step9_1.md",
               "code": "create-test-repo.sh"
+        },
+        {
+               "title": "Quiz",
+               "text": "step9_1.md"
         }
     ],
     "intro": {
