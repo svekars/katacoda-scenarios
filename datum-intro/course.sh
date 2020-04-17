@@ -22,3 +22,5 @@ echo "Installing pandas..."
 pip install pandas
 
 echo "This environment is ready to start experimenting with Pachyderm."
+
+clear
