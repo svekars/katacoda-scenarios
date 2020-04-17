@@ -47,6 +47,11 @@
         {
               "title": "Example: Updating Files",
               "text": "step9.md"
+        },
+        {
+              "title": "Quiz",
+              "text": "step9_1.md",
+              "code": "create-test-repo.sh"
         }
     ],
     "intro": {
