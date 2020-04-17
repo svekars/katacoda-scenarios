@@ -57,3 +57,7 @@ You can pretty print the file that was copied to the repository by using this
 script:
 
 `./print.py`{{execute}}
+
+Also, you can view the filesi in the [UI](http://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].[[KATACODA_DOMAIN]]/?port=80&path=ws/app/repos/cats/commits)
+
+![CSV in the UI](/svekars/scenarios/datum-intro/assets/ui-file-browse-cats.png)
