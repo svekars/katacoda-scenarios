@@ -24,7 +24,11 @@
         },
         {
              "title": "Frequently used Glob Patterns",
-             "text": "step5.md",
+             "text": "step5.md"
+        },
+        {
+             "title": "Quiz",
+             "text": "step5_1.md",
              "verify": "step5-verify.sh"
         },
         {
