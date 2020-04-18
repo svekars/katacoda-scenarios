@@ -19,5 +19,4 @@
    - [*] Setting the correct `glob` value helps to reduce the pipeline processing time.
    - [ ] A job defines a unit of work.
 
-**Note:** Before you proceed, wait for the environment to be ready!
-
+**Note:** Before you proceed, wait for the environment to boot up.
