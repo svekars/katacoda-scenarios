@@ -12,3 +12,6 @@ pachctl create repo test
 pachctl put file -r test@master:/dir1 -f dir1/
 pachctl put file -r test@master:/dir2 -f dir2/
 pachctl put file -r test@master:/dir3 -f dir3/
+
+echo "The test repository has been created."
+clear

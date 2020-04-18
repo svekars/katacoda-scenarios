@@ -1,4 +1,3 @@
-clear
 #until timeout 1s ./check_ready.sh app=pachd; do sleep 5; done
 
 #kubectl apply -f /root/roles.yaml
