@@ -23,5 +23,9 @@ echo "Installing pandas..."
 
 pip install pandas
 
-chmod +x configure-ingress.sh
-./configure-ingress.sh
+chmod +x configure_ingress.sh
+./configure_ingress.sh
+
+clear
+
+echo "This environment is now ready!"
