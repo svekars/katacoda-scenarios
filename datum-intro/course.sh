@@ -23,6 +23,7 @@ echo "Installing pandas..."
 
 pip install pandas
 
+cd /usr/local/bin
 chmod +x configure_ingress.sh
 ./configure_ingress.sh
 

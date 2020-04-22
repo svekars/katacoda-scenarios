@@ -98,5 +98,6 @@
           "port": 30000,
           "imageid": "kubernetes"
   },
-  "environmentsprotocol": "http"
+  "environmentsprotocol": "http",
+  "environmentsdomain": ".http-proxy.katacoda.com"
 }
