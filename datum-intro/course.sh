@@ -22,8 +22,3 @@ chmod +x deploy-pipeline.sh
 echo "Installing pandas..."
 
 pip install pandas
-
-chmod +x /usr/local/bin/configure_ingress.sh
-/usr/local/bin/configure_ingress.sh
-
-echo "This environment is now ready!"
