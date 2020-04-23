@@ -26,6 +26,4 @@ pip install pandas
 chmod +x /usr/local/bin/configure_ingress.sh
 /usr/local/bin/configure_ingress.sh
 
-clear
-
 echo "This environment is now ready!"
